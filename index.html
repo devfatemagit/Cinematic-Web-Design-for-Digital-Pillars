@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Pillars | Cinematic Marketing & Growth Engine</title>
+  
+  <!-- Google Fonts & Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Three.js Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" id="cursor"></div>
+  <div class="custom-cursor-follower" id="cursorFollower"></div>
+
+  <!-- Background 3D Canvas Container -->
+  <div id="canvas-container"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand-logo">
+        <span class="logo-text">DIGITAL PILLARS</span>
+        <span class="logo-dot"></span>
+      </a>
+      
+      <div class="nav-links" id="navLinks">
+        <a href="#hero" class="nav-link active">Overview</a>
+        <a href="#services" class="nav-link">Capabilities</a>
+        <a href="#performance" class="nav-link">Metrics</a>
+        <a href="#testimonials" class="nav-link">Proof</a>
+        <a href="#contact" class="nav-link nav-btn">Initiate Growth</a>
+      </div>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="hero-section">
+    <div class="hero-content">
+      <div class="badge-pill">
+        <span class="pulse-dot"></span>
+        GEN-AI PERFORMANCE ARCHITECTURE
+      </div>
+      
+      <h1 class="hero-title">
+        Architecting <span class="text-gradient">Exponential</span> Digital Dominance
+      </h1>
+      
+      <p class="hero-subtitle">
+        We build high-octane growth engines, hyper-converting web infrastructures, and data-driven performance marketing systems for visionary brands.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary magnetic">
+          <span>Start Acceleration</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#services" class="btn btn-secondary magnetic">
+          <span>Explore Capabilities</span>
+        </a>
+      </div>
+
+      <div class="hero-metrics-strip">
+        <div class="strip-item">
+          <span class="strip-val" data-counter="4.8">0.0</span><span class="strip-unit">x</span>
+          <span class="strip-lbl">Avg. ROAS Achieved</span>
+        </div>
+        <div class="strip-divider"></div>
+        <div class="strip-item">
+          <span class="strip-val" data-counter="142">0</span><span class="strip-unit">M+</span>
+          <span class="strip-lbl">Tracked Conversions</span>
+        </div>
+        <div class="strip-divider"></div>
+        <div class="strip-item">
+          <span class="strip-val" data-counter="99.4">0</span><span class="strip-unit">%</span>
+          <span class="strip-lbl">Client Retention Rate</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Integrated Floating UI Metrics Engine -->
+    <div class="floating-dashboard" id="heroDashboard">
+      <div class="glass-card widget-roas">
+        <div class="card-header">
+          <span class="card-tag">META & GOOGLE ADS</span>
+          <span class="trend-indicator positive"><i class="fa-solid fa-arrow-up-right"></i> +342%</span>
+        </div>
+        <div class="card-body">
+          <div class="metric-label">Blended ROAS</div>
+          <div class="metric-value">6.82x</div>
+        </div>
+        <div class="mini-chart">
+          <svg viewBox="0 0 100 30">
+            <path d="M 0,25 Q 25,5 50,18 T 100,2" fill="none" stroke="url(#cyanGrad)" stroke-width="2.5"/>
+            <defs>
+              <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#00f2fe" />
+                <stop offset="100%" stop-color="#4facfe" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+
+      <div class="glass-card widget-conversion">
+        <div class="card-header">
+          <span class="card-tag">REVENUE ENGINE</span>
+        </div>
+        <div class="card-body">
+          <div class="metric-label">Monthly Tracked Revenue</div>
+          <div class="metric-value">$<span data-counter="2840000">0</span></div>
+        </div>
+      </div>
+
+      <div class="glass-card widget-leads">
+        <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
+        <div class="card-info">
+          <div class="metric-value">4.12%</div>
+          <div class="metric-label">Avg. Conversion Rate</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="services" class="services-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-subtitle">CORE CAPABILITIES</span>
+        <h2 class="section-title">Precision Systems Engineered for Scale</h2>
+        <p class="section-desc">Click any capability to inspect our specialized tactical framework and deliverables.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service Card 1 -->
+        <div class="service-card glass-card" onclick="openServiceModal('paid-media')">
+          <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h3 class="service-title">Paid Media & Performance Marketing</h3>
+          <p class="service-preview">Algorithm-driven campaign deployment, creative testing, and multi-channel scaling algorithms on Meta, Google, and TikTok.</p>
+          <div class="service-tags">
+            <span>Meta Ads</span>
+            <span>Google Search/Shopping</span>
+            <span>Programmatic</span>
+          </div>
+          <button class="service-action-btn">
+            <span>Explore Blueprint</span>
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="service-card glass-card" onclick="openServiceModal('social-growth')">
+          <div class="service-icon"><i class="fa-solid fa-users-rays"></i></div>
+          <h3 class="service-title">Social Media Growth & Management</h3>
+          <p class="service-preview">Brand building strategy, high-velocity content production engines, community orchestration, and audience monetization.</p>
+          <div class="service-tags">
+            <span>Viral Content Engines</span>
+            <span>Community Management</span>
+            <span>Brand Positioning</span>
+          </div>
+          <button class="service-action-btn">
+            <span>Explore Blueprint</span>
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="service-card glass-card" onclick="openServiceModal('web-dev')">
+          <div class="service-icon"><i class="fa-solid fa-cubes"></i></div>
+          <h3 class="service-title">Website Design & Development</h3>
+          <p class="service-preview">Cinematic 3D web experiences, headless frontend architectures, sub-second load speeds, and friction-free CRO journeys.</p>
+          <div class="service-tags">
+            <span>Headless Commerce</span>
+            <span>3D Interactive</span>
+            <span>Conversion UX</span>
+          </div>
+          <button class="service-action-btn">
+            <span>Explore Blueprint</span>
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <!-- Service Card 4 -->
+        <div class="service-card glass-card" onclick="openServiceModal('strategy')">
+          <div class="service-icon"><i class="fa-solid fa-compass"></i></div>
+          <h3 class="service-title">Digital Strategy & Consulting</h3>
+          <p class="service-preview">Holistic digital audits, tech stack integration, full-funnel customer journey design, and executive growth roadmaps.</p>
+          <div class="service-tags">
+            <span>Funnel Audits</span>
+            <span>Tech Infrastructure</span>
+            <span>Growth Roadmaps</span>
+          </div>
+          <button class="service-action-btn">
+            <span>Explore Blueprint</span>
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERFORMANCE DASHBOARD SECTION -->
+  <section id="performance" class="performance-section">
+    <div class="section-container">
+      <div class="dashboard-wrapper glass-card">
+        <div class="dash-top">
+          <div>
+            <span class="dash-badge"><i class="fa-solid fa-chart-pie"></i> LIVE ENGINE DEMO</span>
+            <h3 class="dash-title">Real-Time Performance Architecture</h3>
+          </div>
+          <div class="dash-controls">
+            <button class="time-btn active" data-range="7d">7 Days</button>
+            <button class="time-btn" data-range="30d">30 Days</button>
+            <button class="time-btn" data-range="90d">90 Days</button>
+          </div>
+        </div>
+
+        <div class="dash-grid">
+          <div class="dash-metric-box">
+            <span class="m-lbl">Total Ad Spend</span>
+            <span class="m-val" id="dashSpend">$42,150</span>
+            <span class="m-status positive"><i class="fa-solid fa-arrow-trend-up"></i> Optimized</span>
+          </div>
+          <div class="dash-metric-box">
+            <span class="m-lbl">Tracked Revenue</span>
+            <span class="m-val" id="dashRev">$227,610</span>
+            <span class="m-status positive"><i class="fa-solid fa-arrow-trend-up"></i> +18.4%</span>
+          </div>
+          <div class="dash-metric-box">
+            <span class="m-lbl">Blended ROAS</span>
+            <span class="m-val" id="dashRoas">5.40x</span>
+            <span class="m-status positive"><i class="fa-solid fa-circle-check"></i> Target Met</span>
+          </div>
+          <div class="dash-metric-box">
+            <span class="m-lbl">Cost Per Lead (CPL)</span>
+            <span class="m-val" id="dashCpl">$12.40</span>
+            <span class="m-status positive"><i class="fa-solid fa-arrow-trend-down"></i> -24.1%</span>
+          </div>
+        </div>
+
+        <div class="dash-chart-container">
+          <canvas id="performanceChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-subtitle">CLIENT VERIFICATION</span>
+        <h2 class="section-title">Validated by Growth Leaders</h2>
+      </div>
+
+      <div class="testimonial-slider-container">
+        <div class="testimonial-track" id="testimonialTrack">
+          <!-- Slide 1 -->
+          <div class="testimonial-card glass-card">
+            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="quote">"Digital Pillars redesigned our entire digital ecosystem. Our return on ad spend shot from 2.1x to over 5.8x within 90 days. The level of design and strategic precision is unprecedented."</p>
+            <div class="client-info">
+              <div class="client-avatar">E</div>
+              <div>
+                <div class="client-name">Elena Rostova</div>
+                <div class="client-title">CMO, Lumina Fintech</div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="testimonial-card glass-card">
+            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="quote">"The 3D website built by Digital Pillars became our biggest competitive advantage. Conversion rates doubled immediately after launch, and our brand authority skyrocketed."</p>
+            <div class="client-info">
+              <div class="client-avatar">M</div>
+              <div>
+                <div class="client-name">Marcus Vance</div>
+                <div class="client-title">Founder, Nexus AI Labs</div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="testimonial-card glass-card">
+            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="quote">"Their performance marketing team operates like quantitative traders. They obsess over data, refine creative velocity weekly, and consistently hit revenue targets."</p>
+            <div class="client-info">
+              <div class="client-avatar">S</div>
+              <div>
+                <div class="client-name">Sarah Jenkins</div>
+                <div class="client-title">VP of Growth, Aura Commerce</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-controls">
+          <button class="slider-btn" id="prevTestimonial" aria-label="Previous testimonial"><i class="fa-solid fa-arrow-left"></i></button>
+          <div class="slider-dots" id="sliderDots"></div>
+          <button class="slider-btn" id="nextTestimonial" aria-label="Next testimonial"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / INITIATE SECTION -->
+  <section id="contact" class="contact-section">
+    <div class="section-container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <span class="section-subtitle">INITIATE PARTNERSHIP</span>
+          <h2 class="section-title">Ready to Accelerate Your Digital Dominance?</h2>
+          <p class="section-desc">Schedule a private strategic growth audit. We will analyze your funnel, paid media metrics, and digital infrastructure to identify immediate scale opportunities.</p>
+          
+          <div class="contact-highlights">
+            <div class="ch-item">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span>No long-term lock-ins. Performance speaks.</span>
+            </div>
+            <div class="ch-item">
+              <i class="fa-solid fa-bolt"></i>
+              <span>Audit delivered within 48 hours.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-card glass-card">
+          <form id="contactForm" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" class="form-control" placeholder="e.g. Alexander Wright" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Work Email</label>
+              <input type="email" id="email" class="form-control" placeholder="alexander@company.com" required>
+            </div>
+            <div class="form-group">
+              <label for="company">Company / Website URL</label>
+              <input type="text" id="company" class="form-control" placeholder="company.com" required>
+            </div>
+            <div class="form-group">
+              <label for="serviceNeeded">Primary Objective</label>
+              <select id="serviceNeeded" class="form-control">
+                <option value="paid-media">Paid Media Scaling</option>
+                <option value="web-dev">3D Web / High-Converting Development</option>
+                <option value="social-growth">Social Presence Expansion</option>
+                <option value="full-audit">Comprehensive Digital Audit</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full magnetic">
+              <span>Request Strategic Audit</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+          <div id="formSuccess" class="form-success-msg hidden">
+            <i class="fa-solid fa-circle-check"></i>
+            <h3>Audit Request Received</h3>
+            <p>Our growth lead will contact you within 24 hours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#" class="brand-logo">
+          <span class="logo-text">DIGITAL PILLARS</span>
+          <span class="logo-dot"></span>
+        </a>
+        <p>Architecting cinematic growth engines & digital infrastructures for high-scale global brands.</p>
+      </div>
+      <div class="footer-copy">
+        &copy; 2026 Digital Pillars Agency. All rights reserved. Precision Performance & Engineering.
+      </div>
+    </div>
+  </footer>
+
+  <!-- DISCREET AI FAQ ASSISTANT -->
+  <div class="faq-assistant-widget">
+    <button class="faq-trigger-btn" id="faqTrigger" onclick="toggleFaqAssistant()">
+      <i class="fa-solid fa-headset"></i>
+      <span>AI Assistant</span>
+    </button>
+
+    <div class="faq-window glass-card" id="faqWindow">
+      <div class="faq-header">
+        <div class="faq-title">
+          <span class="pulse-dot"></span>
+          <span>DP Intelligence Assistant</span>
+        </div>
+        <button class="faq-close-btn" onclick="toggleFaqAssistant()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="faq-body" id="faqChatBody">
+        <div class="faq-msg bot">
+          Hello. Select a question below to instantly query our capabilities and operating model.
+        </div>
+      </div>
+
+      <div class="faq-questions">
+        <button class="faq-q-btn" onclick="askFaq(0)">What core services do you offer?</button>
+        <button class="faq-q-btn" onclick="askFaq(1)">What is your typical turnaround timeline?</button>
+        <button class="faq-q-btn" onclick="askFaq(2)">Do you work with early-stage companies?</button>
+        <button class="faq-q-btn" onclick="askFaq(3)">How do you manage advertising campaigns?</button>
+        <button class="faq-q-btn" onclick="askFaq(4)">How do we initiate a project?</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICE MODAL DIALOG -->
+  <div class="modal-overlay" id="serviceModal" onclick="closeServiceModal(event)">
+    <div class="modal-card glass-card" onclick="event.stopPropagation()">
+      <button class="modal-close-btn" onclick="closeServiceModal()"><i class="fa-solid fa-xmark"></i></button>
+      <div id="modalContent">
+        <!-- Content inserted dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
